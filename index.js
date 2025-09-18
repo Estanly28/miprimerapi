@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json());
 
 // Conexión a MongoDB
-const mongoUri = 'mongodb+srv://estanlyfabian_db_user:Seguridad28*@cluster0.offj4qh.mongodb.net/estudiantes?retryWrites=true&w=majority&appName=Cluster0';
+const mongoUri = 'mongodb+srv://estanlyfabian_db_user:Seguridad28%2A@cluster0.offj4qh.mongodb.net/estudiantes?retryWrites=true&w=majority&appName=Cluster0';
 
 mongoose.connect(mongoUri)
   .then(() => console.log('Conectado a MongoDB Atlas'))
@@ -142,3 +142,4 @@ app.post('/api/populate', async (req, res) => {
 
 const port = process.env.PORT || 80;
 app.listen(port, () => console.log(`Servidor corriendo en puerto ${port}...`));
+
